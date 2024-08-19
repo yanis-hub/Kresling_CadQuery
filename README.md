@@ -21,6 +21,7 @@ Dimensions mm
 ## LHS Algorithm 
 
 Latin hypercube is a statistical method for generating a near-random sample of parameter values from a multidimensional distribution. 
+
 This file [LHS_algorithm]() creates the desired number of samples to facilitates the exploration of the design space 
 
 
