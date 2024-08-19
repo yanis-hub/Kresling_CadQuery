@@ -13,7 +13,7 @@ For installation instructions, please consult the [Install.md](Install.md) file.
 
 ## Kresling units 
 
-Dimensions mm 
+The following code [Kresling_unit]() generates a kresling unit, the parameters are highlighted in the begining 
 
 
 
@@ -22,7 +22,7 @@ Dimensions mm
 
 Latin hypercube is a statistical method for generating a near-random sample of parameter values from a multidimensional distribution. 
 
-This file [LHS_algorithm]() creates the desired number of samples to facilitates the exploration of the design space 
+This file [LHS_algorithm](LHS.py) creates the desired number of samples to facilitates the exploration of the design space 
 
 
 
