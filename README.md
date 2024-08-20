@@ -14,6 +14,18 @@ result = Workplane("front").box(width, width, thickness).faces(">Z").hole(thickn
 ```
 
 
+#### Example 2
+```python
+result = (
+    cq.Workplane("front")
+    .box(3.0, 4.0, 0.25)
+    .pushPoints([(0, 0.75), (0, -0.75)])
+    .polygon(6, 1.0)
+    .cutThruAll()
+)
+```
+
+
 For more details, see the official repository: [CadQuery on GitHub](https://github.com/CadQuery/cadquery/tree/master).
 
 ## Installing CadQuery & Cq-Editor GUI 
