@@ -20,6 +20,8 @@ The following code [Kresling_unit]() generates a kresling unit, the parameters a
 
 ## Kresling arrays
 
+The following code [Kresling_array]() generates a kresling unit, the parameters are highlighted in the begining 
+
 ![Example of a Kresling array](images/Kresling_array.svg)
 
 
@@ -27,7 +29,7 @@ The following code [Kresling_unit]() generates a kresling unit, the parameters a
 
 Latin hypercube is a statistical method for generating a near-random sample of parameter values from a multidimensional distribution. 
 
-This file [LHS_algorithm](LHS.py) creates the desired number of samples to facilitates the exploration of the design space 
+This file [LHS_algorithm](LHS.py) is a python code that creates the desired number of samples to facilitates the exploration of the design space.
 
 ## Contact 
 
