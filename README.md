@@ -4,7 +4,7 @@ This repository discusses the use of the python library Cadquery to create Kresl
 ## CadQuery 
 CadQuery is an open-source, easy-to-use Python library for building parametric 3D CAD models.
 
-Here I present two examples to see the use of CadQuery as a powerful yet simple object oriented library. 
+Here are presented three examples to see the use of CadQuery as a powerful yet simple object oriented library. 
 
 #### Example 1 : Box 
 ```python
@@ -12,7 +12,7 @@ thickness = 0.5
 width = 2.0
 result = Workplane("front").box(width, width, thickness).faces(">Z").hole(thickness)
 ```
-
+![Example1](images/Example1_box.svg)
 
 #### Example 2 : Polygons 
 ```python
@@ -24,7 +24,7 @@ result = (
     .cutThruAll()
 )
 ```
-
+![Example2](images/Example2_polygons.svg)
 
 #### Example 3 : Spherical joints 
 ```python
@@ -52,9 +52,10 @@ spherical_joint = (
 
 result = spherical_joint
 ```
+![Example3](images/Example3_spherical_joint.svg)
 
 
-For more details, see the official repository: [CadQuery on GitHub](https://github.com/CadQuery/cadquery/tree/master).
+To see more examples and for more details, please consult the official repository: [CadQuery on GitHub](https://github.com/CadQuery/cadquery/tree/master).
 
 ## Installing CadQuery & Cq-Editor GUI 
 
@@ -70,7 +71,7 @@ The following code [Kresling_unit]() generates a kresling unit, the parameters a
 
 ## Kresling arrays
 
-The following code [Kresling_array]() generates a kresling unit, the parameters are highlighted in the begining 
+The following code [Kresling_array]() generates a kresling array, the parameters are highlighted in the begining 
 
 ![Example of a Kresling array](images/Kresling_array.svg)
 
