@@ -12,9 +12,7 @@ thickness = 0.5
 width = 2.0
 result = Workplane("front").box(width, width, thickness).faces(">Z").hole(thickness)
 ```
-<div align="center">
-  ![Example1](images/Example1_box.svg)
-</div>
+![Example1](images/Example1_box.svg)
 
 #### Example 2 : Polygons 
 ```python
