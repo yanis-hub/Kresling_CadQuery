@@ -15,7 +15,7 @@ For installation instructions, please consult the [Install.md](Install.md) file.
 
 The following code [Kresling_unit]() generates a kresling unit, the parameters are highlighted in the begining 
 
-![Example of a Kresling unit](images/Kresling_unit)
+![Example of a Kresling unit](images/Kresling_unit.png)
 
 
 
