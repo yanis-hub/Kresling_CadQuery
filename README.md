@@ -24,5 +24,9 @@ Latin hypercube is a statistical method for generating a near-random sample of p
 
 This file [LHS_algorithm](LHS.py) creates the desired number of samples to facilitates the exploration of the design space 
 
+## Contact 
+
+Author's Email : yanis.abad@polymtl.ca 
+
 
 
