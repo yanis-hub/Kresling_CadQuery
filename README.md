@@ -4,6 +4,16 @@ This repository discusses the use of the python library Cadquery to create Kresl
 ## CadQuery 
 CadQuery is an open-source, easy-to-use Python library for building parametric 3D CAD models.
 
+Here I present two examples to see the use of CadQuery as a powerful yet simple object oriented library. 
+
+#### Example 1
+```python
+thickness = 0.5
+width = 2.0
+result = Workplane("front").box(width, width, thickness).faces(">Z").hole(thickness)
+```
+
+
 For more details, see the official repository: [CadQuery on GitHub](https://github.com/CadQuery/cadquery/tree/master).
 
 ## Installing CadQuery & Cq-Editor GUI 
