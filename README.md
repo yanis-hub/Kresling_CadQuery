@@ -64,7 +64,7 @@ For installation instructions, please consult the [Install.md](Install.md) file.
 
 ## Kresling units 
 
-The following code [Kresling_unit]() generates a kresling unit, the parameters are highlighted in the begining 
+The following code [Kresling_unit](Kresling_unit.py) generates a kresling unit, the parameters are highlighted in the begining 
 
 ![Example of a Kresling unit](images/Kresling_unit.svg)
 
