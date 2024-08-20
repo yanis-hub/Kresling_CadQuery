@@ -18,6 +18,9 @@ The following code [Kresling_unit]() generates a kresling unit, the parameters a
 ![Example of a Kresling unit](images/dessin.svg)
 
 
+## Kresling arrays
+
+![Example of a Kresling array](images/Kresling_array.svg)
 
 
 ## LHS Algorithm 
