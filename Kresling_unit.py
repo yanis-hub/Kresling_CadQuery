@@ -37,16 +37,6 @@ P2_tuple = tuple(P2)
 P3_tuple = tuple(P3)
 P4_tuple = tuple(P4)
 
-# Function to create an extruded triangle
-def create_extruded_triangle(points, extrusion_distance):
-    triangle = (
-        cq.Workplane()
-        .polyline(points)
-        .close()
-        .extrude(extrusion_distance)
-    )
-    return triangle
-
 # Function to offset the points outward
 def offset_points(points, triangle_thickness):
     offset_points = []
@@ -64,11 +54,6 @@ def offset_points(points, triangle_thickness):
         offset_points.append(points[i] + normal * triangle_thickness)
 
     return offset_points
-
-# Extrusion of the triangles
-extrusion_distance = 0.1  # Keep the extrusion distance small 
-triangle1 = create_extruded_triangle([P1_tuple, P2_tuple, P4_tuple], extrusion_distance)
-triangle2 = create_extruded_triangle([P2_tuple, P4_tuple, P3_tuple], extrusion_distance)
 
 # Function to scale down a triangle
 def scale_triangle(triangle, scale_factor_base):
@@ -106,8 +91,8 @@ def create_connecting_solids(triangle1_points, scaled_triangle1_points):
     return solid
 
 # Create connecting solids
-connecting_solid1 = create_connecting_solids(scaled_triangle_tuples, small_triangle_tuples)
-connecting_solid2 = create_connecting_solids(scaled_triangle22_tuples, small_triangle2_tuples)
+small_triangle_in = create_connecting_solids(scaled_triangle_tuples, small_triangle_tuples)
+small_triangle_out = create_connecting_solids(scaled_triangle22_tuples, small_triangle2_tuples)
 
 triangle2_solid = create_connecting_solids([P2_tuple, P4_tuple, P3_tuple], scaled_triangle2_tuples)
 triangle1_solid = create_connecting_solids([P1_tuple, P2_tuple, P4_tuple], scaled_triangle1_tuples)
@@ -120,8 +105,8 @@ def apply_rotations(shape, num_rotations, rotation_angle, axis_point, axis_direc
         shapes.append(shapes[-1].rotate(axis_point, axis_direction, rotation_angle))
     return shapes
 
-connecting_solids1_rotated = apply_rotations(connecting_solid1, num_sides, rotation_angle, (0, 0, 0), (0, 0, 1))
-connecting_solids2_rotated = apply_rotations(connecting_solid2, num_sides, rotation_angle, (0, 0, 0), (0, 0, 1))
+small_triangle_in_rotated = apply_rotations(small_triangle_in, num_sides, rotation_angle, (0, 0, 0), (0, 0, 1))
+small_triangle_out_rotated = apply_rotations(small_triangle_out, num_sides, rotation_angle, (0, 0, 0), (0, 0, 1))
 triangle2_solid_rotated = apply_rotations(triangle2_solid, num_sides, rotation_angle, (0, 0, 0), (0, 0, 1))
 triangle1_solid_rotated = apply_rotations(triangle1_solid, num_sides, rotation_angle, (0, 0, 0), (0, 0, 1))
 hinge_rotated = apply_rotations(hinge, num_sides, rotation_angle, (0, 0, 0), (0, 0, 1))
@@ -129,9 +114,9 @@ hinge_rotated = apply_rotations(hinge, num_sides, rotation_angle, (0, 0, 0), (0,
 # Combining all the objects to form one
 combined_object = base1.union(base2)
 
-for solid in connecting_solids1_rotated:
+for solid in small_triangle_in_rotated:
     combined_object = combined_object.union(solid)
-for solid2 in connecting_solids2_rotated:
+for solid2 in small_triangle_out_rotated:
     combined_object = combined_object.union(solid2)
 for i in triangle2_solid_rotated:
     combined_object = combined_object.union(i)
