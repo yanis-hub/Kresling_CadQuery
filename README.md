@@ -71,7 +71,7 @@ The following code [Kresling_unit](Kresling_unit.py) generates a kresling unit, 
 
 ## Kresling arrays
 
-The following code [Kresling_array]() generates a kresling array, the parameters are highlighted in the begining 
+The following code [Kresling_array](Kresling_array.py) generates a kresling array, the parameters are highlighted in the begining 
 
 ![Example of a Kresling array](images/Kresling_array.svg)
 
