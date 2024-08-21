@@ -55,7 +55,7 @@ result = spherical_joint
 ![Example3](images/Example3_spherical_joint.svg)
 
 
-To see more examples and for more details, please consult the official repository: [CadQuery on GitHub](https://github.com/CadQuery/cadquery/tree/master).
+To see more examples and for more details, please consult the official repository : [CadQuery on GitHub](https://github.com/CadQuery/cadquery/tree/master).
 
 ## Installing CadQuery & Cq-Editor GUI 
 
